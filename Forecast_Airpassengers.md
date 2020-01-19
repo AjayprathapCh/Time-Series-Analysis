@@ -1,14 +1,4 @@
----
-
-title: "Time Series Analysis"
-
-output:
-
-html_document:
-
-keep_md: yes
-
----
+## Demand Forecasting using ARIMA
 
 Load the required packages
 
