@@ -328,7 +328,7 @@ plot(forecast_model_exp,xlab = "Year", ylab='No.of passengers', main= "Forecasti
 
 ![](Forecast_Airpassengers_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
-####Measuring the performance of the model
+#### Measuring the performance of the model
 
 
 ```r
@@ -347,7 +347,7 @@ We see that none of the lines are crossing the crital level.
 
 Hence the residuals are not auto correlated but are random distributed indicating that the model is fine.
 
-#####Lung box Test
+##### Lung box Test
 
 
 ```r
@@ -364,7 +364,7 @@ Box.test(forecast_values$residuals,lag=20,type = "Ljung-Box")
 
 Here we see that the pvalue is above 0.05, indicated that the box test statistic is not significant.Further confirming that the residuals are not correlated.
 
-#####Plotting Residuals
+##### Plotting Residuals
 
 
 ```r
@@ -382,7 +382,7 @@ mean(forecast_values$residuals)
 ## [1] -0.002387389
 ```
 
-#####Histogram for Residuals
+##### Histogram for Residuals
 
 
 ```r
@@ -397,7 +397,7 @@ We see that the residuals are normally distributed with equal numbers of points 
 
 **Hence, we can conclde that the model is doing a good job**
 
-####Predicting demand for next 12 months with 95% confidence interval
+#### Predicting demand for next 12 months with 95% confidence interval
 
 
 ```r
@@ -416,7 +416,7 @@ pred_values$realistic <- exp(pred_values$pred)
 pred_values$optimistic <- exp(pred_values$pred+2*pred_values$se)
 pred_values$pessimistic <-exp(pred_values$pred-2*pred_values$se)
 forecasted <- as.data.frame(pred_values)
-write.csv(forecasted,"forecast_values.csv")
+write.csv(forecasted,"forecast_values_1960.csv")
 ```
 
 
