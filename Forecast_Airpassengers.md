@@ -1,8 +1,13 @@
 ---
+
 title: "Time Series Analysis"
+
 output:
-  html_document:
-    keep_md: yes
+
+html_document:
+
+keep_md: yes
+
 ---
 
 Load the required packages
